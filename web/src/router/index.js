@@ -11,11 +11,11 @@ import Colors from '@/views/theme/Colors'
 import Typography from '@/views/theme/Typography'
 
 import Charts from '@/views/Charts'
-import HighCharts from '@/views/HighCharts'
+import HighChartsDemo from '@/views/HighChartsDemo'
 import Widgets from '@/views/Widgets'
 
 // Views -- Ztree
-//import ZTrees from '@/views/ZTrees'
+// import ZTrees from '@/views/ZTrees'
 
 // Views - Components
 import Cards from '@/views/base/Cards'
@@ -101,8 +101,8 @@ export default new Router({
         },
         {
           path: 'highcharts',
-          name: 'HighCharts',
-          component: HighCharts
+          name: 'HighChartsDemo',
+          component: HighChartsDemo
         },
         {
           path: 'widgets',
