@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul id='vmtree' class='ztree'></ul>
+    <ul id='treeDemo' class='ztree'></ul>
   </div>
 </template>
 
@@ -17,14 +17,11 @@
   import 'ztree'
 
   export default {
-    name: 'CloudVMTree',
+    name: 'CloudOrgTree',
     data: function () {
       return {
         target: undefined,
         setting: {
-          view: {
-            showLine: false
-          },
           data: {
             simpleData: {
               enable: true
@@ -137,10 +134,10 @@
       }
     },
     mounted () {
-      this.target = $.fn.zTree.init($('#vmtree'), this.setting, this.zNodes)
+      this.target = $.fn.zTree.init($('#treeDemo'), this.setting, this.zNodes)
     },
     beforeDestroy: function () {
-      $.fn.zTree.destroy('vmtree')
+      $.fn.zTree.destroy('treeDemo')
     }
 
   }

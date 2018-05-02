@@ -182,6 +182,16 @@ export default {
       icon: 'icon-chart'
     },
     {
+      name: 'FancyTrees',
+      url: '/fancytrees',
+      icon: 'icon-chart'
+    },
+    {
+      name: 'DataTables',
+      url: '/datatables',
+      icon: 'icon-chart'
+    },
+    {
       name: 'Notifications',
       url: '/notifications',
       icon: 'icon-bell',

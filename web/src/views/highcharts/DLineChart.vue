@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div :id="id" :option="option"></div>
   </div>
 </template>
 
@@ -8,8 +9,12 @@
   export default {
     name: 'DLineChart',
     props: {
-      title: String,
-      series: Array
+      id: {
+        type: String
+      },
+      option: {
+        type: Object
+      }
     },
     data: function () {
       return {
@@ -17,35 +22,10 @@
       }
     },
     mounted () {
-      this.target = Highcharts.chart(this.$el,
-        {
-          chart: {
-            type: 'spline',
-            animation: Highcharts.svg, // don't animate in old IE
-            marginRight: 10,
-            events: {
-              load: function () {
-                // set up the updating of the chart each second
-                var series = this.series[0]
-                setInterval(function () {
-                  var x = (new Date()).getTime() // current time
-                  var y = Math.random()
-                  series.addPoint([x, y], true, true)
-                }, 1000)
-              }
-            }
-          },
-          title: {
-            text: this.title
-          },
-          series: this.series
-        }
-      )
+      this.target = Highcharts.chart(this.id, this.option)
     },
-
     beforeDestroy: function () {
       this.target.destroy()
     }
-
   }
 </script>

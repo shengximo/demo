@@ -12,6 +12,8 @@ import Typography from '@/views/theme/Typography'
 
 import Charts from '@/views/Charts'
 import HighChartsDemo from '@/views/HighChartsDemo'
+import FancyTreesDemo from '@/views/FancyTreesDemo'
+import DataTablesDemo from '@/views/DataTablesDemo'
 import Widgets from '@/views/Widgets'
 
 // Views -- Ztree
@@ -103,6 +105,16 @@ export default new Router({
           path: 'highcharts',
           name: 'HighChartsDemo',
           component: HighChartsDemo
+        },
+        {
+          path: 'fancytrees',
+          name: 'FancyTreesDemo',
+          component: FancyTreesDemo
+        },
+        {
+          path: 'datatables',
+          name: 'DataTablesDemo',
+          component: DataTablesDemo
         },
         {
           path: 'widgets',
